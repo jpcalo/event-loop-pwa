@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop - Painel Admin 🛠️</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+
+</head>
+<body>
+
+    <div class="box" style="width: 100%; max-width: 600px; margin: 0 auto 30px auto; display: block; text-align: left;">
+        <h3 id="formTitle">Anunciar Novo Evento Sustentável</h3>
+        <form id="eventForm">
+            <input type="hidden" id="eventId">
+
+            <label for="title">Título do Evento:</label>
+            <input type="text" id="title" placeholder="Ex: Plantação de Árvores no Parque" required>
+
+            <label for="description">Descrição Completa:</label>
+            <input type="text" id="description" placeholder="Descreve os objetivos ecológicos da atividade..." required>
+
+            <label for="location">📍 Localização / Ponto de Encontro:</label>
+            <input type="text" id="location" placeholder="Ex: Parque Central da Maia" required>
+
+            <label for="event_date">📅 Data e Hora:</label>
+            <input type="datetime-local" id="event_date" required>
+
+            <label for="category">🏷️ Categoria:</label>
+            <select id="category" required>
+                <option value="Reciclagem">Reciclagem & Economia Circular</option>
+                <option value="Mobilidade">Mobilidade Sustentável</option>
+                <option value="Espaços Verdes">Preservação de Espaços Verdes</option>
+                <option value="Biodiversidade">Biodiversidade & Plantação</option>
+            </select>
+
+            <label for="max_participants">👥 Limite Máximo de Participantes:</label>
+            <input type="number" id="max_participants" min="1" placeholder="Ex: 25" required>
+
+            <label for="image">📸 Cartaz do Evento (Imagem):</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="submit" id="btnSubmitForm">Submeter Evento</button>
+            <button type="button" id="btnCancelEdit" onclick="cancelarEdicao()" style="background: #7f8c8d; display: none; margin-top: 10px;">Cancelar Edição</button>
+        </form>
+    </div>
+
+    <hr style="border: 1px solid #2ecc71; margin-bottom: 30px;">
+
+    <h3>Iniciativas Atualmente Publicadas</h3>
+    <div class="events-grid" id="eventsContainer"></div>
+
+    <div class="landing-wrapper">   
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Event Loop 🌿</h4>
+                    <p>A tua plataforma urbana para descobrir, participar e criar iniciativas sustentáveis na cidade.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Criar Conta</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>✉️ suporte@eventloop.pt</p>
+                    <p>📍 Porto, Portugal</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Event Loop. Todos os direitos reservados. Projeto Académico.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/main-dashboard.js"></script>
+</body>
+</html>

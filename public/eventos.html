@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop - Próximos Eventos 🌿</title>
+    
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <div class="filter-bar">
+        <input type="text" id="searchBar" placeholder="🔍 Pesquisar por título ou localização..." oninput="filtrarEventos()">
+        <select id="categoryFilter" onchange="filtrarEventos()">
+            <option value="">🏷️ Todas as Categorias</option>
+            <option value="Reciclagem">Reciclagem & Economia Circular</option>
+            <option value="Mobilidade">Mobilidade Sustentável</option>
+            <option value="Espaços Verdes">Preservação de Espaços Verdes</option>
+            <option value="Biodiversidade">Biodiversidade & Plantação</option>
+        </select>
+        <button onclick="toggleMostrarApenasFavoritos()" id="btnFiltroFav" style="padding: 10px; background: white; border: 1px solid #bdc3c7; border-radius: 4px; cursor: pointer; width: auto; margin-top: 0;">⭐ Ver Favoritos</button>
+    </div>
+
+    <h3>Próximas Iniciativas Disponíveis</h3>
+    <div class="events-grid" id="publicEventsContainer"></div>
+
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharDetalhes()">&times;</span>
+            <h2 id="modalTitle" style="color: #27ae60; margin-top: 0;"></h2>
+            <p id="modalDesc" class="modal-desc"></p>
+            <div class="event-meta">📍 <b>Local:</b> <span id="modalLocation"></span></div>
+            <div class="event-meta">📅 <b>Data:</b> <span id="modalDate"></span></div>
+            <div class="event-meta">🏷️ <b>Categoria:</b> <span id="modalCategory"></span></div>
+            <div class="event-meta">👥 <b>Lotação Atual:</b> <span id="modalMaxParticipants"></span></div>
+            
+            <button id="modalRegisterBtn" class="btn-register-event">Garantir o meu Lugar 📝</button>
+
+            <div class="ticket-zone" id="ticketZone">
+                <h4 style="color: #16a085; margin: 0;">🎟️ O teu Bilhete Digital Ecológico</h4>
+                <p style="font-size: 12px; color: #7f8c8d; margin: 5px 0;">Apresenta este QR Code no dia da atividade para fazer o check-in rápido.</p>
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="landing-wrapper">   
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Event Loop 🌿</h4>
+                    <p>A tua plataforma urbana para descobrir, participar e criar iniciativas sustentáveis na cidade.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Criar Conta</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>✉️ suporte@eventloop.pt</p>
+                    <p>📍 Porto, Portugal</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Event Loop. Todos os direitos reservados. Projeto Académico.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/main-eventos.js"></script>
+</body>
+</html>

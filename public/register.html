@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop - Criar Conta</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body class="auth-container">
+    <div class="box">
+        <h2>Criar Conta</h2>
+        <p style="font-size: 14px; color: #7f8c8d;">Junta-te ao Event Loop 🌿</p>
+        
+        <form id="regForm">
+            <input type="text" id="name" placeholder="Teu Nome" required>
+            <input type="email" id="email" placeholder="Teu Email" required>
+            <input type="password" id="password" placeholder="Palavra-passe" required>
+            
+            <label for="role">Tipo de Conta:</label>
+            <select id="role" required>
+                <option value="regular">Utilizador Comum</option>
+                <option value="admin">Administrador (Gestão)</option>
+            </select>
+
+            <button type="submit">Registar</button>
+        </form>
+        
+        <p id="msg" style="font-weight: bold; margin-top: 15px;"></p>
+        <a href="login.html">Já tens conta? Faz login</a>
+    </div>
+
+    <div class="landing-wrapper">   
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Event Loop 🌿</h4>
+                    <p>A tua plataforma urbana para descobrir, participar e criar iniciativas sustentáveis na cidade.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Criar Conta</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>✉️ suporte@eventloop.pt</p>
+                    <p>📍 Porto, Portugal</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Event Loop. Todos os direitos reservados. Projeto Académico.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/auth-register.js"></script>
+</body>
+</html>
