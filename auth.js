@@ -116,5 +116,4 @@ const protegerAdmin = (req, res, next) => {
     }
 };
 
-// ATENÇÃO: Adiciona a nova função 'protegerAdmin' aqui no fim do teu exports atual:
 module.exports = { registerUser, loginUser, protegerPagina, logoutUser, protegerAdmin };
