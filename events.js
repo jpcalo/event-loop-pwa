@@ -44,7 +44,6 @@ const createEvent = (db, req, res) => {
 };
 
 // 2. Listar Todos os Eventos (READ - Listagem)
-// Nota: Deixamos esta função limpa aqui, pois passámos a lógica avançada com JOIN do Passo 5.3 direto para o server.js
 const getAllEvents = (db, req, res) => {
     db.query('SELECT * FROM events ORDER BY event_date ASC', (err, results) => {
         if (err) {
